@@ -1,0 +1,26 @@
+
+<h1> Liaison de données </h1>
+
+<input [type]="number"/>
+
+<input type="text" [(ngModel)]="value" />
+<p>{{value}}</p>
+
+<input type="text" [value]="value2" (input)="value2=$event.target.value"/>
+<p>{{value2}}</p>
+
+<br />
+
+<h1> Evènement click change valeur boolean </h1>
+
+<button (click)="changeValue()">Clic!</button>
+
+<p *ngIf="status">P1</p>
+<p *ngIf="!status">P2</p>
+
+
+<h1> Afficher une liste </h1>
+
+<ul>
+  <li *ngFor="let text of texts">{{text.number}}</li>
+</ul>
